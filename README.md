@@ -1,2 +1,2 @@
-# uncertainty_project
+# uncertainty project
 Final Project for Visualizing Uncertainty

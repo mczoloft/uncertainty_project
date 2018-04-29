@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+  /*width: 100%;*/
+  /*height: 100%;*/
+  padding: 0;
+  margin: 0 0 0 0;
+  font-family: Georgia;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  /*width: 80%;*/
+  height: 100%;
+  justify-content: center;
+}
+
+.sticky {
+    font-family: Verdana;
+    font-size: 12px;
+    line-height: 17px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /*width: 30%;*/
+    padding: 20px;
+    border-left: 1px solid #3c3232;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+}
+
+header {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: black;
+    height: 50px;
+    color: lightgreen;
+    padding: 10px;
+}
+
+.big_column {
+    display: flex;
+    /*height: 100%;*/
+    /*flex-direction: row;*/
+    /*justify-content: center;*/
+    width: 70%;
+    background-color: #e6ffe6;
+    padding: 20px;
+    /*top: 50px;*/
+}
+
+.sticky:before,
+.sticky:after {
+    content: '';
+    display: flex;
+}
