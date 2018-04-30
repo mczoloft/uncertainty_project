@@ -101,53 +101,6 @@ base
         var findValue = d3.entries(d.valuesOrig);
         var findRep = d3.entries(d.valuesRep);
         
-        var g1 = starRep
-        .append('g')
-        .style('transform', 'rotate(' + k*72 + 'deg)')
-        .style('transform-origin', '50% 50%')
-        .attr('class', findRep[k].key);
-        
-        g1
-        .append('rect')
-        .attr('width', '20px')
-        .attr('height', function(){
-            
-            console.log(findRep[0]);
-            console.log(findRep[0].key);
-            console.log(findRep[0].value);
-            
-            if (findRep[k].key==='effectsize')
-            return s0(findRep[k].value) + 'px';
-            else if (findRep[k].key==='N')
-            return s1(findRep[k].value) + 'px';
-            else if (findRep[k].key==='pvalue')
-            return s2(findRep[k].value) + 'px';
-            else if (findRep[k].key==='receffect')
-            return s3(findRep[k].value) + 'px';
-            else return s4(findRep[k].value) + 'px';
-            
-        })
-        .attr('rx', '10px')
-        .attr('ry', '10px')
-        .attr('x', '190px')
-        .attr('y', '140px')
-        .attr('stroke', '1px')
-        .attr('fill', function(){
-
-            if (findRep[k].key==='effectsize')
-            return 'rgb(211, 217, 226)';
-            else if (findRep[k].key==='N')
-            return 'rgb(211, 217, 226)';
-            else if (findRep[k].key==='pvalue')
-            return 'rgb(211, 217, 226)';
-            else if (findRep[k].key==='receffect')
-            return 'rgb(211, 217, 226)';
-            else return 'rgb(211, 217, 226)';
-            
-        })
-        .attr('opacity', '1')
-        ;
-        
         var g2 = starOrig
         .append('g')
         .style('transform', 'rotate(' + k*72 + 'deg)')
@@ -195,8 +148,58 @@ base
             else return 'rgb(0, 128, 142)';
             
         })
-        .attr('opacity', '0.5')
+        .attr('opacity', '1')
         ;
+        
+        
+        
+        var g1 = starRep
+        .append('g')
+        .style('transform', 'rotate(' + k*72 + 'deg)')
+        .style('transform-origin', '50% 50%')
+        .attr('class', findRep[k].key);
+        
+        g1
+        .append('rect')
+        .attr('width', '2px')
+        .attr('height', function(){
+            
+            console.log(findRep[0]);
+            console.log(findRep[0].key);
+            console.log(findRep[0].value);
+            
+        
+            if (findRep[k].key==='effectsize')
+            return s0(findRep[k].value) + 'px';
+            else if (findRep[k].key==='N')
+            return s1(findRep[k].value) + 'px';
+            else if (findRep[k].key==='pvalue')
+            return s2(findRep[k].value) + 'px';
+            else if (findRep[k].key==='receffect')
+            return s3(findRep[k].value) + 'px';
+            else return s4(findRep[k].value) + 'px';
+            
+        })
+        .attr('rx', '1px')
+        .attr('ry', '1px')
+        .attr('x', '199px')
+        .attr('y', '149px')
+        .attr('fill', function(){
+
+            if (findRep[k].key==='effectsize')
+            return 'rgb(0, 0, 0)';
+            else if (findRep[k].key==='N')
+            return 'rgb(0, 0, 0)';
+            else if (findRep[k].key==='pvalue')
+            return 'rgb(0, 0, 0)';
+            else if (findRep[k].key==='receffect')
+            return 'rgb(0, 0, 0)';
+            else return 'rgb(0, 0, 0)';
+            
+        })
+        .attr('opacity', '0.3')
+        ;
+        
 
     }
 

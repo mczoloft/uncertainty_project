@@ -34,6 +34,43 @@ body {
     background-color: white;
 }
 
+.keys{
+    flex-direction: column;
+    
+}
+
+#e{
+    font-size: 10px;
+    line-height: 12px;
+    padding: 5px;
+    background-color: rgb(255, 199, 80);
+}
+#s{
+    font-size: 10px;
+    line-height: 12px;
+    padding: 5px;
+    background-color: rgb(255, 140, 80);
+}
+#p{
+    font-size: 10px;
+    line-height: 12px;
+    padding: 5px;
+    background-color: rgb(255, 29, 52);
+}
+#r{
+    font-size: 10px;
+    line-height: 12px;
+    padding: 5px;
+    background-color: rgb(92, 218, 204);
+}
+#t{
+    font-size: 10px;
+    line-height: 12px;
+    padding: 5px;
+    background-color: rgb(0, 128, 142);
+}
+
+
 .int{
     padding-top: 20px;
     padding-bottom: 30px;
@@ -62,11 +99,6 @@ body {
     color: rgb(92, 218, 204);
     background-color: black;
     padding: 10px 10px 10px 30px;
-}
-
-ul {
-    display: inline-flex;
-    list-style: none;
 }
 
 .bottom {
