@@ -127,21 +127,21 @@ base
             else return s4(findRep[k].value) + 'px';
             
         })
-        .attr('rx', '5px')
-        .attr('ry', '5px')
-        .attr('x', '195px')
-        .attr('y', '145px')
+        .attr('rx', '10px')
+        .attr('ry', '10px')
+        .attr('x', '190px')
+        .attr('y', '140px')
         .attr('fill', function(){
 
             if (findRep[k].key==='effectsize')
-            return 'lightgrey';
+            return 'rgb(211, 217, 226)';
             else if (findRep[k].key==='N')
-            return 'lightgrey';
+            return 'rgb(211, 217, 226)';
             else if (findRep[k].key==='pvalue')
-            return 'lightgrey';
+            return 'rgb(211, 217, 226)';
             else if (findRep[k].key==='receffect')
-            return 'lightgrey';
-            else return 'lightgrey';
+            return 'rgb(211, 217, 226)';
+            else return 'rgb(211, 217, 226)';
             
         })
         .attr('opacity', '1')
