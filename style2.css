@@ -9,6 +9,13 @@ html {
     line-height: 25px;
 }
 
+.formspot {
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    background-color: pink;
+}
+
 body {
     height: 100%;   
     overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
