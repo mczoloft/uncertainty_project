@@ -109,7 +109,7 @@ base
         
         g1
         .append('rect')
-        .attr('width', '10px')
+        .attr('width', '20px')
         .attr('height', function(){
             
             console.log(findRep[0]);
