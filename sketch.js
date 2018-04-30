@@ -131,6 +131,7 @@ base
         .attr('ry', '10px')
         .attr('x', '190px')
         .attr('y', '140px')
+        .attr('stroke', '1px')
         .attr('fill', function(){
 
             if (findRep[k].key==='effectsize')
