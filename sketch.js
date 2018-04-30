@@ -74,15 +74,47 @@ var base = d3
 base
 .each(function(d,i){
     
+    
     d3.select(this)
     .append('circle')
     .attr('cx', '200px')
     .attr('cy', '150px')
     .attr('r', '150px')
     .attr('fill', 'rgba(0,0,0,0)')
-    .attr('stroke', 'black')
+    .attr('stroke', 'lightgrey')
     .attr('stroke-dasharray', '5,5')
     ;
+    
+    d3.select(this)
+    .append('circle')
+    .attr('cx', '200px')
+    .attr('cy', '150px')
+    .attr('r', '112px')
+    .attr('fill', 'rgba(0,0,0,0)')
+    .attr('stroke', 'lightgrey')
+    .attr('stroke-dasharray', '5,5')
+    ;
+    
+    d3.select(this)
+    .append('circle')
+    .attr('cx', '200px')
+    .attr('cy', '150px')
+    .attr('r', '75px')
+    .attr('fill', 'rgba(0,0,0,0)')
+    .attr('stroke', 'lightgrey')
+    .attr('stroke-dasharray', '5,5')
+    ;
+    
+    d3.select(this)
+    .append('circle')
+    .attr('cx', '200px')
+    .attr('cy', '150px')
+    .attr('r', '37px')
+    .attr('fill', 'rgba(0,0,0,0)')
+    .attr('stroke', 'lightgrey')
+    .attr('stroke-dasharray', '5,5')
+    ;
+    
     
     var star = d3.select(this)
     .append('g')
@@ -150,8 +182,6 @@ base
         })
         .attr('opacity', '1')
         ;
-        
-        
         
         var g1 = starRep
         .append('g')
