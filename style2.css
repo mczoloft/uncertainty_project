@@ -40,30 +40,35 @@ body {
 }
 
 #e{
+    border-radius: 5px;
     font-size: 10px;
     line-height: 12px;
     padding: 5px;
     background-color: rgb(255, 199, 80);
 }
 #s{
+    border-radius: 5px;
     font-size: 10px;
     line-height: 12px;
     padding: 5px;
     background-color: rgb(255, 140, 80);
 }
 #p{
+    border-radius: 5px;
     font-size: 10px;
     line-height: 12px;
     padding: 5px;
     background-color: rgb(255, 29, 52);
 }
 #r{
+    border-radius: 5px;
     font-size: 10px;
     line-height: 12px;
     padding: 5px;
     background-color: rgb(92, 218, 204);
 }
 #t{
+    border-radius: 5px;
     font-size: 10px;
     line-height: 12px;
     padding: 5px;
