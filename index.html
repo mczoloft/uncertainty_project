@@ -3,28 +3,41 @@
         <title>Reproduction project</title>
         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,700,700i" rel="stylesheet">
         <script src = "assets/stickyfill.min.js"></script>
-        <link rel = "stylesheet" href="assets/style.css">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <link rel = "stylesheet" href="style2.css">
     </head>
     <body>
-        <header>
-        Final project for Visualizing Uncertainty
-        </header>
-        
-        <div class="wrapper">
-        
-            <div class="big_column">
-            The robustness of a scientific finding must be judged not just by the merits of the original experiments, but also by the ability of these findings to be independently reproduced. Concerns that published findings, however, are commonly failing to reproduce have shaken trust in science, and led to calls for reforms in how scientific findings are evaluated and transmitted. As part of this movement, groups have called for replication studies – studies that repeat experiments in previous work to test the reproducibility of previous findings – to be better rewarded and more widely shared. This collection presents datasets collected from a series of replication studies, each presented in a transparent manner that would allow others to analyse the data themselves or compare it with past works. Several of the studies host their data in the Open Science Framework, a service of the Center for Open Science, which has been a strong advocate for wider research replication.
+        <!--<div class='formspot'>-->
+        <!--    <form method="POST" action="https://formspree.io/flaviopessoa@gmail.com">-->
+        <!--    <input type="email" name="email" placeholder="Your email">-->
+        <!--    <textarea name="message" placeholder="Your message"></textarea>-->
+        <!--    <button type="submit">Send</button>-->
+        <!--    </form>-->
+        <!--</div>-->
+    <div id="left" class="column">
+        <div class="top-left">Legend</div>
+        <div class="bottom">
+            <div class="keys">
+                <h1>Behind the curtain: measuring issues on studies' replication </h1>
+                <small>The data is available from <a link href='https://cos.io/?_ga=2.173557856.23221923.1525186457-1454588847.1525186457'>Open Science Project</a>. </small>
+                
+                <p id='e'>Effect Size</p>
+                <p id='s'>Sample Size</p>
+                <p id='p'>PValues</p>
+                <p id='r'>Recreated Effect Size</p>
+                <p id='t'>TTest Value</p>
+                
             </div>
-            
-            <div class="sticky">
-            <p><h4>What are our measures?</h4></p>
-            <p><b>p-values</b></p>
-            </div>
-            
         </div>
-        <script>
-            var elements = document.querySelectorAll('.sticky');
-            Stickyfill.add(elements);
-        </script>
-    </body>
+    </div>
+    <div id="right" class="column">
+        <div class="top-right">Project for Visualizing Uncertainty</div>
+        <div class="bottom">
+            <div class="int">The robustness of a scientific finding must be judged not just by the merits of the original experiments, but also by the ability of these findings to be independently reproduced. Concerns that published findings, however, are commonly failing to reproduce have shaken trust in science, and led to calls for reforms in how scientific findings are evaluated and transmitted.</div>
+            <div class='viz'>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="sketch.js"></script>
 </html>
