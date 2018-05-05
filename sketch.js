@@ -115,23 +115,18 @@ base
     .attr('stroke-dasharray', '5,5')
     ;
     
-    
     var star = d3.select(this)
     .append('g')
     .style('transform','rotate(180deg)')
     .style('transform-origin', '50% 50%')
     ;
     
+    //original stars
     for (var k = 0; k<5; k++){
-
         var starOrig = star
         .attr('class', 'valuesOrig');
         
-        var starRep = star
-        .attr('class', 'valuesRep');
-
         var findValue = d3.entries(d.valuesOrig);
-        var findRep = d3.entries(d.valuesRep);
         
         var g2 = starOrig
         .append('g')
@@ -182,6 +177,13 @@ base
         })
         .attr('opacity', '1')
         ;
+    }
+    //replication stars
+    for (var k = 0; k<5; k++){
+        var starRep = star
+        .attr('class', 'valuesRep');
+
+        var findRep = d3.entries(d.valuesRep);
         
         var g1 = starRep
         .append('g')
@@ -229,8 +231,6 @@ base
         })
         .attr('opacity', '0.3')
         ;
-        
-
     }
 
 })
