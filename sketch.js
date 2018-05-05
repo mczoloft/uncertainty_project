@@ -51,7 +51,7 @@ var results = [
 
 var s0 = d3.scaleLinear().domain([0, 0.3]).range([0, 150]);
 var s1 = d3.scaleLinear().domain([0, 304]).range([0, 150]);
-var s2 = d3.scaleLinear().domain([1, 0.003]).range([0, 150]);
+var s2 = d3.scaleLinear().domain([0, 0.87]).range([150, 0]);
 var s3 = d3.scaleLinear().domain([0, 0.3]).range([0, 150]);
 var s4 = d3.scaleLinear().domain([0, 5.15]).range([0, 150]);
 
