@@ -2,63 +2,167 @@
     box-sizing: border-box;
 }
 
-body, html {
-  /*width: 100%;*/
-  /*height: 100%;*/
-  padding: 0;
-  margin: 0 0 0 0;
-  font-family: Georgia;
-  font-size: 18px;
-  line-height: 30px;
+html {
+    height: 100%;
+    font-family: 'Ibm Plex Mono';
+    font-size: 15px;
+    line-height: 25px;
 }
 
-.wrapper{
-  display: flex;
-  flex-direction: row;
-  /*width: 80%;*/
-  height: 100%;
-  justify-content: center;
-}
-
-.sticky {
-    font-family: Verdana;
+.formspot {
     font-size: 12px;
-    line-height: 17px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    /*width: 30%;*/
-    padding: 20px;
-    border-left: 1px solid #3c3232;
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
+    color: gray;
+}
+a{
+    color: rgb(92, 218, 204);
+}
+a:hover{
+    color: black;
+}
+a:visited{
+    color: rgb(0, 128, 142);
 }
 
-header {
-    font-family: 'IBM Plex Mono', monospace;
+body {
+    height: 100%;   
+    overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
+    margin: 0px;  /*removes default style*/
+    display: flex;  /*enables flex content for its children*/
+    box-sizing: border-box;
+    background-color: lightgrey;
+}
+
+.column {
+    height: 100%;  /*allows both columns to span the full height of the browser window*/
+    display: flex;
+    flex-direction: column;  /*places the left and right headers above the bottom content*/
+    background-color: white;
+}
+
+#left {
+    width: 30%;  /*makes sure that content is not cut off in a smaller browser window*/
+    border-right: 1px dashed black;
+    
+}
+#right {
+    background-color: white;
+}
+
+.keys{
+    flex-direction: column;
+}
+
+#e{
+    border-radius: 5px;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 5px;
+    background-color: rgb(255, 199, 80);
+}
+#s{
+    border-radius: 5px;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 5px;
+    background-color: rgb(255, 140, 80);
+}
+#p{
+    border-radius: 5px;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 5px;
+    background-color: rgb(255, 29, 52);
+}
+#r{
+    border-radius: 5px;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 5px;
+    background-color: rgb(92, 218, 204);
+}
+#t{
+    border-radius: 5px;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 5px;
+    background-color: rgb(0, 128, 142);
+}
+
+.int{
+    padding-top: 20px;
+    width: 50%;
+    max-width: 500px;
+    margin-bottom: 10px;
+}
+.colors {
+    top: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    background-color: white;
+    width: 100%;
+    -webkit-transition: position 1s, top 1s; /* Safari */
+    transition: position 1s, top 1s;
+
+}
+
+.top-left {
     font-size: 10px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.3px;
+    flex-shink: 0;
     background-color: black;
-    height: 50px;
-    color: lightgreen;
-    padding: 10px;
+    color: rgb(92, 218, 204);
+    padding: 10px 10px 10px 10px ;
 }
 
-.big_column {
-    display: flex;
-    /*height: 100%;*/
-    /*flex-direction: row;*/
-    /*justify-content: center;*/
-    width: 70%;
-    background-color: #e6ffe6;
-    padding: 20px;
-    /*top: 50px;*/
+.top-right {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    flex-shrink: 0;
+    display: inline-flex;
+    color: rgb(92, 218, 204);
+    background-color: black;
+    padding: 10px 10px 10px 30px;
 }
 
-.sticky:before,
-.sticky:after {
-    content: '';
+.bottom {
+    padding: 30px;
+    flex-grow: 1;  /*ensures that the container will take up the full height of the parent container*/
+    overflow-y: auto;  /*adds scroll to this container*/
+}
+
+.title{
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    padding: 30px 0px;
+    border-bottom: 1px solid rgb(92, 218, 204);
+}
+
+svg.box{
+    margin-top: 20px;
+}
+
+.descript{
+    margin-left: 10px;
+    font-size: 12px;
+    text-transform: none;
+    max-width: 300px;
+    display: none;
+}
+
+.graphcontainer{
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.introholder{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }

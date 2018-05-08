@@ -1,6 +1,7 @@
 var results = [
     {
     study:'chefs',
+    words: "Using photographs of the 25 highest and 25 lowest ranked Fortune 1000 companies, researchers asked participants to make personality judgements and examined whether these judgements related to measuring the financial success of these companies.  These findings of the original study suggest that naive judgements may provide a more accurate assessment of an individual than well-informed judgments can.",
     originaltitle: 'The face of success: inferences from chief executive officers\' appearance predict company profits.',
     valuesOrig: {
         effectsize: 0.3, 
@@ -17,6 +18,7 @@ var results = [
     },
     {
     study:'views', 
+    words: "The original authors of this study examined where participants looked when witnessing offensive behavior.  Undergraduate participants watched a video of four men (three white and one black) discuss university admissions. When one of the White discussants criticized affirmative action, the researchers manipulated whether or not the participants believed the Black discussant heard what was being said.  The original findings determined that a member of a relevant minority group attracted attention during potentially offensive comments.  Participants, however, showed little interest in the Black bystander when they believed that he could not hear what was being said.",
     originaltitle: 'Where do we look during potentially offensive behavior?',
     valuesOrig: {
         effectsize: 0.18, 
@@ -33,6 +35,7 @@ var results = [
     },
     {
     study:'sexdif',
+    words: "In this study, the researchers studied sex differences in speed dating and used follow up questionnaires after the event to determine if there were sex differences in association with the partner's attractiveness and income.  The researchers found no sex differences, and the ideal preferences of the participants assessed prior to the event did not predict the outcome of the speed dating activity.",
     originaltitle: 'Sex differences in mate preferences revisited: Do people know what they initially desire in a romantic partner?',
     valuesOrig: {
         effectsize: 0.04, 
@@ -62,19 +65,54 @@ var base = d3
 .enter()
 .append('div')
 .attr('class', 'title')
+.attr('id', function(d){return d.study})
 .text(function(d) {return d.originaltitle})
 .append('div')
+.attr('class', 'graphcontainer')
+;
+
+var graphic = base
 .append('svg')
 .attr('class', 'box')
 .attr('width', '400px')
 .attr('height', '300px')
+.attr('id', function(d) {return d.study})
 .style('background-color', 'white')
 ;
 
-base
+graphic
 .each(function(d,i){
     
-    
+     d3.select('#' + d.study)
+    .on('mouseover', function(d){
+        d3.select('#' + d.study + 'd')
+        .style('display', 'flex')
+        ;
+    }
+    )
+    .on('mouseout', function(d){
+        d3.select('#' + d.study + 'd')
+        .style('display', 'none')
+        ;
+    }
+    )
+    ;
+
+    d3.select(this)
+    .on('mouseover', function(d){
+        d3.select('#' + d.study + 'd')
+        .style('display', 'flex')
+        ;
+    }
+    )
+    .on('mouseout', function(d){
+        d3.select('#' + d.study + 'd')
+        .style('display', 'none')
+        ;
+    }
+    )
+    ;
+
     d3.select(this)
     .append('circle')
     .attr('cx', '200px')
@@ -234,4 +272,11 @@ base
     }
 
 })
+;
+
+base
+.append('div')
+.attr('class', 'descript')
+.attr('id', function(d){return d.study + 'd'})
+.html(function(d) {return '<p>' + d.words + '</p>'})
 ;

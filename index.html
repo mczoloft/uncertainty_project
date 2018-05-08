@@ -4,7 +4,7 @@
         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,700,700i" rel="stylesheet">
         <script src = "assets/stickyfill.min.js"></script>
         <script src="https://d3js.org/d3.v4.min.js"></script>
-        <link rel = "stylesheet" href="style2.css">
+        <link rel = "stylesheet" href="assets/style.css">
     </head>
     <body>
     <div id="left" class="column">
@@ -36,7 +36,7 @@
             <input type="radio" name="gender1" value="strongly agree"> strongly agree<br>
             
             <br>
-            2. From this visualization, I can effectively compare differences between the original and replicated study outcomes. Do you:<br>
+            2. From this visualization, I can compare differences between the original and replicated study outcomes. Do you:<br>
             
             <input type="radio" name="gender2" value="strongly disagree"> strongly disagree<br>
             <input type="radio" name="gender2" value="disagree"> disagree<br>
@@ -88,14 +88,21 @@
     <div id="right" class="column">
         <div class="top-right">The data is available from&nbsp<a link href='https://cos.io/?_ga=2.173557856.23221923.1525186457-1454588847.1525186457'>Open Science Project</a>.</div>
         <div class="bottom" id="bottomright">
-            <div class="int">The robustness of a scientific finding must be judged not just by the merits of the original experiments, but also by the ability of these findings to be independently reproduced. Concerns that published findings, however, are commonly failing to reproduce have shaken trust in science, and led to calls for reforms in how scientific findings are evaluated and transmitted.
+            <div class='introholder'>
+                <div class="int">The robustness of a scientific finding must be judged not just by the merits of the original experiments, but also by the ability of these findings to be independently reproduced. Concerns that published findings, however, are commonly failing to reproduce have shaken trust in science, and led to calls for reforms in how scientific findings are evaluated and transmitted. 
+                </div>
+                <div class='int'>
+                    <img src="assets/boxCurves.svg" width='300px'></img>
+                </div>
             </div>
             <div class='colors'>
+                <small>M E A S U R E S:</small>
                 <span id='e'>Effect Size</span>
                 <span id='s'>Sample Size</span>
                 <span id='p'>PValues</span>
                 <span id='r'>Recreated Effect Size</span>
-                <span id='t'>TTest Value</span>
+                <span id='t'>TTest Value</span><br>
+                
             </div>
             <div class='viz'>
             </div>
@@ -103,32 +110,6 @@
     </div>
 </body>
 <script>
-    
-    
-    // document.getElementById("bottomleft").onscroll = function() {manualSticky1();};
-    // function manualSticky1() {
-        
-    //     //logging vertical space
-    //     var heightTop = document.getElementsByClassName("top-left")[0].scrollHeight;
-    //     var heightIntro = document.getElementsByClassName("introkeys")[0].scrollHeight;
-    //     var introMargin = document.getElementsByClassName("introkeys")[0].style.marginBottom;
-    //     var totalHeightBefore = heightTop + heightIntro + introMargin;
-    //     console.log('heightTop is:' + heightTop + '; heightIntro is: ' + heightIntro + '; introMargin is: ' + introMargin);
-    //     console.log('total is:' + totalHeightBefore);
-        
-    //     //logging horizontal space
-    //     var widthGraph = document.getElementsByClassName('top-left')[0].scrollWidth;
-    //     console.log(widthGraph);
-        
-    //     if (document.getElementById("bottomleft").scrollTop > totalHeightBefore || document.getElementById("bottomleft").scrollTop > totalHeightBefore) {
-    //         document.getElementsByClassName("formspot")[0].style.position = "absolute";
-    //         document.getElementsByClassName("formspot")[0].style.top = "80px";
-    //         document.getElementsByClassName("formspot")[0].style.width = widthGraph + "px";
-    //     } else {
-    //         document.getElementsByClassName("formspot")[0].style.position = "";
-    //         document.getElementsByClassName("formspot")[0].style.top = "80px";
-    //     }
-    // }
 
     document.getElementById("bottomright").onscroll = function() {manualSticky();};
     function manualSticky() {
@@ -158,5 +139,5 @@
     
 
 </script>
-<script type="text/javascript" src="sketch.js"></script>
+<script type="text/javascript" src="assets/sketch.js"></script>
 </html>
